@@ -1,0 +1,218 @@
+/* EXTERNAL */
+.colors {
+    color:  hsl(223, 87%, 63%); /*Blue*/
+
+    color: hsl(223, 100%, 88%); /*Pale Blue*/
+    color: hsl(354, 100%, 66%); /*Light Red*/
+
+    color:  hsl(0, 0%, 59%); /*Gray*/
+    color: hsl(209, 33%, 12%); /*Very Dark Blue*/
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+/*
+    font-family: 'Libre Franklin', sans-serif;
+    Weights: 300, 600, 700
+*/
+
+/* GENERAL */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+main {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* SPECIFY */
+
+.logo {
+    width: 85px;
+    height: auto;
+    margin-top: 85px;
+    margin-bottom: 50px;
+}
+    .logo img {
+        width: 100%;
+        height: 100%;
+    }
+h1 {
+    font-size: 45px;
+    margin-bottom: 22px;
+    color: hsl(209, 33%, 12%);
+}
+    h1 span {
+        font-weight: 300;
+        color: hsl(0, 0%, 59%);
+    }
+
+.mnsg-tittle {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: hsl(209, 33%, 12%);
+}
+
+.ingres {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 95px;
+}
+    .ingres .acces {
+            width: 640px;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+            .ingres .acces section {
+                width: auto;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+            }
+                .ingres .acces section input {
+                    width: 420px;
+                    height: 55px;
+                    border-radius: 50px;
+                    border: 1px solid hsl(0, 0%, 59%);
+                    color: black;
+                    padding: 0 30px;
+                    font-family: 15px;
+                }
+                    .ingres .acces section input.error-detect {
+                        border: 1px solid hsl(354, 100%, 66%);
+                    }
+                .ingres .acces section .error-mnsg {
+                    display: none;
+                    visibility: hidden;
+                }
+                    .ingres .acces section .error-mnsg.error-detect {
+                        display: initial;
+                        visibility: visible;
+                        font-style: italic;
+                        font-size: 12px;
+                        margin-left: 30px;
+                        color: hsl(354, 100%, 66%);
+                    }
+            .ingres .acces button {
+                width: 200px;
+                height: 55px;
+                border-radius: 50px;
+                border: none;
+                background: hsl(223, 87%, 63%);
+                color: white;
+                font-size: 16px;
+                font-weight: 600;
+                cursor: pointer;
+            }
+.hero-img {
+    width: 640px;
+    height: auto
+}
+
+.links {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    margin-bottom: 25px;
+    gap: 12px;
+}
+    .links a {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        border: 1px solid hsl(0, 0%, 59%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+        .links a i {
+            color: hsl(223, 87%, 63%);
+        }
+
+@media (max-width: 765px) {
+    .logo {
+        margin-top: 165px;
+        margin-bottom: 85px;
+    }
+    h1 {
+        margin-bottom: 45px;
+        font-size: 40px;
+    }
+        h1 span {
+            font-weight: 300;
+        }
+    
+    .mnsg-tittle {
+        margin-bottom: 65px;
+    }
+        .ingres .acces {
+                width: 550px;
+                align-items: center;
+            }
+                .ingres .acces section {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+                    .ingres .acces section input {
+                        width: 330px;
+                    }
+                .ingres .acces button {
+                    width: 200px;
+                    height: 60px;
+                }
+    .hero-img {
+        width: 420px;
+        height: auto
+    }
+}
+
+@media (max-width: 555px) {
+    .logo {
+        margin-top: 120px;
+        margin-bottom: 85px;
+        width: fit-contents;
+    }
+    h1 {
+        margin-bottom: 30px;
+        font-size: 25px;
+    }
+        h1 span {
+            font-weight: 300;
+        }
+    
+    .mnsg-tittle {
+        font-size: 15px;
+        margin-bottom: 65px;
+    }
+        .ingres .acces {
+            width: 315px;
+            flex-direction: column;
+            gap: 60px;
+            align-items: center;
+        }
+                .ingres .acces section input {
+                    width: 315px;
+                }
+            .ingres .acces button {
+                width: 315px;
+                height: 60px;
+            }
+    .hero-img {
+        width: 315px;
+        height: auto
+    }
+}
